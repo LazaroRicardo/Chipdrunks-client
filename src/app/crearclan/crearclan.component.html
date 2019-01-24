@@ -1,3 +1,19 @@
-<p>
-  crearclan works!
-</p>
+<article>
+  <div id="mensaje" class="error esconder">Nombre de clan o miembros no válidos</div>
+
+  <form #userform="ngForm" (ngSubmit)="addClan()">
+      <div class="pergamino"><h1> <span class="orange">Crear</span> <span class="yellow">Clan</span></h1></div>
+      <div> 
+          <a href="#"><img src="./assets/img/icons8-imagen-50.png" alt=""></a>
+          <p>cambiar foto</p> 
+      </div>
+      <div>
+          <input [(ngModel)]="nuevoClan.nombre" class="name" type="text" name="nombre" id="nombre" placeholder="Nombre de Clan" required minlength="4" maxlength="30" pattern="[a-zA-Z]*">
+      </div>
+      <div>
+          <input [(ngModel)]="nombres" class="post" name="nombres" placeholder="Camaradas" required>
+          <div id="errorcamaradas" class="error esconder">Completa el nombre de los camaradas con el formato correcto</div>
+      </div>
+      <div><button [disabled]="!userform.valid">Crear</button></div>
+  </form>
+</article>

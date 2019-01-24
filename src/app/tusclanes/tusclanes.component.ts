@@ -1,4 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { Clan } from '../models/Clan';
+import { User } from '../models/User';
+import { Usuario } from '../models/Usuario';
+import { ClanService } from '../services/clan.service';
+import { currentId } from 'async_hooks';
 
 @Component({
   selector: 'app-tusclanes',
@@ -6,10 +11,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./tusclanes.component.scss']
 })
 export class TusclanesComponent implements OnInit {
+  private _tusClanes:Clan[] = null;
 
-  constructor() { }
+  constructor(private _tusclanesservice:ClanService) { }
 
-  ngOnInit() {
-  }
-
+  ngOnInit() {  
+    this._tusclanesservice.getClanesFromAPI().subscribe(listaclanes => {
+      this._tusClanes = listaclanes;
+    
+  });
+}
 }

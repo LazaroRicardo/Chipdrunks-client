@@ -14,6 +14,9 @@ import { PagregistroComponent } from './pagregistro/pagregistro.component';
 import { IndexComponent } from './index/index.component';
 import { PerfilinicioComponent } from './perfilinicio/perfilinicio.component';
 import { EditperfComponent } from './editperf/editperf.component';
+import { ClanComponent } from './clan/clan.component';
+import { CrearclanComponent } from './crearclan/crearclan.component';
+import { TusclanesComponent } from './tusclanes/tusclanes.component';
 
 const routes: Routes = [
   {path:"login", component:LoginComponent, pathMatch:"full"},
@@ -30,6 +33,9 @@ const routes: Routes = [
   {path:"index", component:IndexComponent, pathMatch:"full"},
   {path:"perfilinicio",component:PerfilinicioComponent,pathMatch:"full"},
   {path:"editperf",component:EditperfComponent,pathMatch:"full"},
+  {path:"clan", component:ClanComponent, pathMatch:"full"},
+  {path:"clan/crearclan", component:CrearclanComponent, pathMatch:"full"},
+  {path:"clan/tusclanes", component:TusclanesComponent, pathMatch:"full"},
   {path:"", redirectTo:"pgprincipal", pathMatch:"full"}
 ];
 

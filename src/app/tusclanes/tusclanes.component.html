@@ -1,3 +1,25 @@
-<p>
-  tusclanes works!
-</p>
+<article>
+  <div class="pergamino"><h1> <span class="orange">Tus</span> <span class="yellow">Clanes</span></h1></div>
+  <table>
+      <thead>
+          <tr>
+              <th>
+                  <div class="cabe">Tus Clanes</div>
+              </th>
+              <th>
+                  <div class="cabe">Usuarios</div>
+              </th>
+          </tr>
+      </thead>
+
+      <tbody id="tus_clanes">
+        <tr *ngFor="let aClan of _tusClanes">
+          <td>{{aClan.nombre}}</td>
+          <td>
+            <div *ngFor="let aUser of aClan.usuarios">{{aUser.nombre}}</div>
+          </td>
+        </tr>
+      </tbody >
+      
+  </table>
+</article>
