@@ -1,3 +1,28 @@
-<p>
-  rankinggrup works!
-</p>
+<section>
+  <div class="pergamino"><h1> <span class="orange">Ranking</span> <span class="yellow">Grupal</span></h1></div>
+  <table>
+      <thead>
+          <!--  CABECERA -->
+          <tr>
+              <th>
+                  <div class="cabe">Posición</div>
+              </th>
+              <th>
+                  <div class="cabe">Nombre</div>
+              </th>
+              <th>
+                  <div class="cabe">Nº Bares Visitados</div>
+              </th>
+          </tr>
+      </thead>
+
+      <tbody id="rank_grup"><!--  cuerpo de tabla -->
+        <tr *ngFor="let aClan of _rankinggrupArr">
+          <td>{{aClan.cid}}</td>
+          <td>{{aClan.nombre}}</td>
+          <td>{{aClan.nbares}}</td>
+        </tr>
+
+      </tbody>
+  </table>
+</section>

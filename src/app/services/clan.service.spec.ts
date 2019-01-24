@@ -1,12 +1,12 @@
 import { TestBed } from '@angular/core/testing';
 
-import { PgprincipalService } from './pgprincipal.service';
+import { ClanService } from './clan.service';
 
-describe('PgprincipalService', () => {
+describe('ClanService', () => {
   beforeEach(() => TestBed.configureTestingModule({}));
 
   it('should be created', () => {
-    const service: PgprincipalService = TestBed.get(PgprincipalService);
+    const service: ClanService = TestBed.get(ClanService);
     expect(service).toBeTruthy();
   });
 });
