@@ -26,6 +26,7 @@ import { RankingindComponent } from './rankingind/rankingind.component';
 import { RankinginicioComponent } from './rankinginicio/rankinginicio.component';
 import { TusclanesComponent } from './tusclanes/tusclanes.component';
 import { DetalleBarComponent } from './detalle-bar/detalle-bar.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -50,7 +51,8 @@ import { DetalleBarComponent } from './detalle-bar/detalle-bar.component';
     RankingindComponent,
     RankinginicioComponent,
     TusclanesComponent,
-    DetalleBarComponent
+    DetalleBarComponent,
+    FooterComponent
   ],
   imports: [
     FormsModule,
