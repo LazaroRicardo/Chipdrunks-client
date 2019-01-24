@@ -4,11 +4,12 @@
       <div class="bg-dark p-4 mymenu">
         <h5 class="text-white h4">Menú</h5>
         <ul class="list-group">
-          <a href="./perfilinicio.html"><li class="list-group-item">Perfil</li></a>
-          <a href="./codigoqr.html"><li class="list-group-item">Escanear QR</li></a>
-          <a href="./eventos.html"><li class="list-group-item">Eventos</li></a>
-          <a href="./rankinginicio.html"><li class="list-group-item">Ranking</li></a>
-          <a href="./clan.html"><li class="list-group-item">Clanes</li></a>
+          <a [routerLink]="['perfilinicio']"><li class="list-group-item">Perfil</li></a>
+          
+          <a [routerLink]="['codigoqr']"><li class="list-group-item">Escanear QR</li></a>
+          <a [routerLink]="['eventos']"><li class="list-group-item">Eventos</li></a>
+          <a [routerLink]="['rankinginicio']"><li class="list-group-item">Ranking</li></a>
+          <a [routerLink]="['clan']"><li class="list-group-item">Clanes</li></a>
         </ul>
       </div>
     </div>
@@ -22,6 +23,7 @@
             <input type="search" placeholder="Buscar . . ." [(ngModel)]="inputBusqueda">
           </div>
         </div>
+        
         <div class="search" *ngIf="inputBusqueda">
           <table class="search-table" id="searchTable">
             <thead>

@@ -23,7 +23,7 @@ export class MiheaderComponent implements OnInit {
   }
 
   filterBarsByName(valor: string) {
-    console.log('filterBarsByName:', valor)
+    console.log('filterBarsByName:', valor);
     if(valor) {
       return this.listaBares.filter(unBar => { return unBar.nombre.toLowerCase().indexOf(valor.toLocaleLowerCase())>=0 })
     }else {

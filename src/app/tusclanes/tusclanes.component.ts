@@ -3,7 +3,7 @@ import { Clan } from '../models/Clan';
 import { User } from '../models/User';
 import { Usuario } from '../models/Usuario';
 import { ClanService } from '../services/clan.service';
-import { currentId } from 'async_hooks';
+
 
 
 @Component({
