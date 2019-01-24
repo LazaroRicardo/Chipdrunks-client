@@ -10,6 +10,10 @@ import { PgprincipalComponent } from './pgprincipal/pgprincipal.component';
 import { RankinginicioComponent } from './rankinginicio/rankinginicio.component';
 import { RankingindComponent } from './rankingind/rankingind.component';
 import { RankinggrupComponent } from './rankinggrup/rankinggrup.component';
+import { PagregistroComponent } from './pagregistro/pagregistro.component';
+import { IndexComponent } from './index/index.component';
+import { PerfilinicioComponent } from './perfilinicio/perfilinicio.component';
+import { EditperfComponent } from './editperf/editperf.component';
 
 const routes: Routes = [
   {path:"login", component:LoginComponent, pathMatch:"full"},
@@ -22,6 +26,10 @@ const routes: Routes = [
   {path:"rankinginicio", component:RankinginicioComponent, pathMatch:"full"},
   {path:"rankinginicio/rankingind", component:RankingindComponent, pathMatch:"full"},
   {path:"rankinginicio/rankinggrup", component:RankinggrupComponent, pathMatch:"full"},
+  {path:"pagregistro",component:PagregistroComponent,pathMatch:"full"},
+  {path:"index", component:IndexComponent, pathMatch:"full"},
+  {path:"perfilinicio",component:PerfilinicioComponent,pathMatch:"full"},
+  {path:"editperf",component:EditperfComponent,pathMatch:"full"},
   {path:"", redirectTo:"pgprincipal", pathMatch:"full"}
 ];
 

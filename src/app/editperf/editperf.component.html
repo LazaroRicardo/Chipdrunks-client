@@ -1,3 +1,36 @@
 <p>
   editperf works!
 </p>
+<article id="form">
+  <div id="mensaje" class="error esconder">Modificación de perfil no válida</div>
+
+  <form id="formPerfil" #userform="ngForm" (ngSubmit)="editUsuario()" method="POST" action="">
+      <div class="pergamino"><h1> <span class="orange">Editar</span> <span class="yellow">Perfil</span></h1></div>
+      <div> 
+          <a href="#"><img src="./images/icons8-imagen-50.png" alt=""></a>
+          <p>cambiar foto</p> 
+      </div>
+      <div>
+          <input [(ngModel)]="modifUsuario.nombre" class="name" type="text" name="nombre" id="nombre" placeholder="Nick" required minlength="2" maxlength="30" pattern="[a-zA-Z]*">
+          <div id="errornick" class="error esconder">Completa el Nick con el formato correcto</div>
+      </div>
+      <div>
+          <input [(ngModel)]="modifUsuario.codigo" class="post" type="text" name="post" id="post" placeholder="Código postal" pattern="\d*" minlength="5" maxlength="5" required>
+          <div id="errorcp" class="error esconder">Completa el cógigo postal con el formato correcto</div>
+      </div>
+      <div>
+          <input [(ngModel)]="modifUsuario.email" class="mail" type="email" name="E-mail" id="email" placeholder="Correo" required>
+          <div id="errorcorreo" class="error esconder">Completa el correo con el formato correcto</div>
+      </div>
+      <div>
+          <input [(ngModel)]="modifUsuario.pass" class="pass" type="password" name="contra" id="contra" placeholder="Contraseña" required minlength="2" maxlength="14" pattern="[a-zA-Z0-9]*">
+          <div id="errorcontraseña" class="error esconder">Completa la contraseñacon el formato correcto</div>
+      </div>
+      <div>
+          <input  class="repass" type="password" name="repeatcontra" id="repeatcontra" placeholder="Nueva Contraseña" required minlength="2" maxlength="14" pattern="[a-zA-Z0-9]*">
+          <div id="errorcontraseñanueva" class="error esconder">Completa la contraseña con el formato correcto</div>
+      </div>
+      <button  [disabled]="!userform.valid" id="btnPerfil">Modificar</button>
+  </form>
+</article>
+

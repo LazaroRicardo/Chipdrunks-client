@@ -51,7 +51,27 @@ export class UsuarioService {
 
     return this._http.post<Usuario>(this.API_URL, usuarioAEnviar, options);
   }
+  
+ editUsuarioAPI(editUsu:Usuario)
+ {
+  const options={
+    headers:{
+      "Content-Type":"application/json"
+    }
+  };
 
+  const usuarioAmodificar={
+    nid:editUsu.nid,
+    nombre: editUsu.nombre,
+    email: editUsu.email,
+    codigopostal: editUsu.codigopostal,
+    password: editUsu.password,
+    nbares: editUsu.nbares
+  }
+  console.log("usuarioAEnviar:",usuarioAmodificar);
+
+   return this._http.post<Usuario>(this.API_URL,usuarioAmodificar,options);
+ }
 
 
 }

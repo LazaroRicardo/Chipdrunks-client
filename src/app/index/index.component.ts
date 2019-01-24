@@ -11,5 +11,5 @@ export class IndexComponent implements OnInit {
 
   ngOnInit() {
   }
-
+  imagePath ="assets/images/Ardilla-Cerveza.png";
 }

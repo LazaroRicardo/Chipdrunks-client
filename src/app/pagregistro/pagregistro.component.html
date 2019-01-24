@@ -1,3 +1,33 @@
-<p>
-  pagregistro works!
-</p>
+
+  <section id="secRegistro">
+    <div>
+        <img src="{{imagePath}}" alt="">
+    </div>
+
+    <div class="Chippy">
+        <h1> <span class="orange">Chip</span><span class="yellow">Drunks</span><span class="blonch">Registro</span></h1>
+    </div>
+
+    <form id="formUsuario" #userform="ngForm" (ngSubmit)="addUsuario()" novalidate>
+        <div class="error esconder" id="servererr">No se ha podido guardar el amigo, inténtalo nuevamente</div>
+
+        <div>
+            <input type="text" [(ngModel)]="nuevoUsuario.nombre"  placeholder="Nombre de usuario" id="nombre" name="nombre" required pattern="[A-Za-zñÑ0-9 ]*">
+            <div class="error esconder" id="nombreerr">Debes introducir un nombre válido</div>
+        </div>
+        <div>
+            <input type="email" [(ngModel)]="nuevoUsuario.email"  placeholder="Email" id="email" name="email" required>
+            <div class="error esconder" id="emailerr" >Debes introducir un email válido</div>
+        </div>
+        <div>
+            <input type="text" [(ngModel)]="nuevoUsuario.codigopostal" placeholder="Código postal" id="codigopostal" minlength="5" maxlength="5" name="codigo" pattern="\d*" required>
+            <div class="error esconder" id="codierr" >Debes introducir un código postal válido</div>
+        </div>
+        <div>
+            <input type="password" [(ngModel)]="nuevoUsuario.pass" id="pass" name="pass" required pattern="[A-Za-zñÑ0-9 ]*">
+            <div class="error esconder" id="passierr" ng-show="formUsuario.pass.$error.required" >Debes introducir una contraseña válida</div>
+        </div>
+        <div><button  [disabled]="!userform.valid">Registrarse</button></div>
+    </form>
+
+</section>

@@ -8,8 +8,8 @@ import { Router } from '@angular/router';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
-
-  user = { email:'juan@gmail.com', pass:'md5_coded'};
+  imagePath ="assets/images/Ardilla-Cerveza.png";
+  user = { usuario:'', pass:''};
 
   constructor(private _auth: AuthService, private _router:Router) { }
 
@@ -18,10 +18,11 @@ export class LoginComponent implements OnInit {
 
   acceder() {
     console.log(this.user);
-    this._auth.login(this.user.email, this.user.pass).subscribe(respuesta => {
+    this._router.navigate(['/index']);
+    this._auth.login(this.user.usuario, this.user.pass).subscribe(respuesta => {
       console.log(respuesta);
       localStorage.setItem('token',respuesta.message);
-      this._router.navigate(['/b']);
+      
     });
   }
 
