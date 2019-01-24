@@ -5,6 +5,7 @@ import { Usuario } from '../models/Usuario';
 import { ClanService } from '../services/clan.service';
 import { currentId } from 'async_hooks';
 
+
 @Component({
   selector: 'app-tusclanes',
   templateUrl: './tusclanes.component.html',
