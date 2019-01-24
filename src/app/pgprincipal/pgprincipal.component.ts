@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+declare let $:any;
+
 
 @Component({
   selector: 'app-pgprincipal',
@@ -11,5 +13,6 @@ export class PgprincipalComponent implements OnInit {
 
   ngOnInit() {
   }
+
 
 }

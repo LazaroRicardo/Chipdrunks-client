@@ -11,11 +11,6 @@ import { MiheaderComponent } from './miheader/miheader.component';
 import { NewUserComponent } from './users/new-user/new-user.component';
 import { NewPedidoComponent } from './pedido/new-pedido/new-pedido.component';
 import { LoginComponent } from './login/login.component';
-import { Barejemplo1Component } from './barejemplo1/barejemplo1.component';
-import { Barejemplo2Component } from './barejemplo2/barejemplo2.component';
-import { Barejemplo3Component } from './barejemplo3/barejemplo3.component';
-import { Barejemplo4Component } from './barejemplo4/barejemplo4.component';
-import { BarejemploComponent } from './barejemplo/barejemplo.component';
 import { BlurpComponent } from './blurp/blurp.component';
 import { ClanComponent } from './clan/clan.component';
 import { CodigoqrComponent } from './codigoqr/codigoqr.component';
@@ -30,6 +25,7 @@ import { RankinggrupComponent } from './rankinggrup/rankinggrup.component';
 import { RankingindComponent } from './rankingind/rankingind.component';
 import { RankinginicioComponent } from './rankinginicio/rankinginicio.component';
 import { TusclanesComponent } from './tusclanes/tusclanes.component';
+import { DetalleBarComponent } from './detalle-bar/detalle-bar.component';
 
 @NgModule({
   declarations: [
@@ -40,11 +36,6 @@ import { TusclanesComponent } from './tusclanes/tusclanes.component';
     NewUserComponent,
     NewPedidoComponent,
     LoginComponent,
-    Barejemplo1Component,
-    Barejemplo2Component,
-    Barejemplo3Component,
-    Barejemplo4Component,
-    BarejemploComponent,
     BlurpComponent,
     ClanComponent,
     CodigoqrComponent,
@@ -58,7 +49,8 @@ import { TusclanesComponent } from './tusclanes/tusclanes.component';
     RankinggrupComponent,
     RankingindComponent,
     RankinginicioComponent,
-    TusclanesComponent
+    TusclanesComponent,
+    DetalleBarComponent
   ],
   imports: [
     FormsModule,
